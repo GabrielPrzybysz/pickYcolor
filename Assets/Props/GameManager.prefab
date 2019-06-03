@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4223435533130350}
+  - component: {fileID: 114540739622421172}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -33,9 +34,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487839849019522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7014258, y: 0.07825625, z: -3.3085938}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114540739622421172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487839849019522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aad6f9386694244abc78e9cd6475c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+  CubeColor:
+  - {fileID: 1905965812526882, guid: 798117e5bc3e4ca4f9f1d33b71a4ef18, type: 2}
+  - {fileID: 1351966727490890, guid: cea31b284fd4cc44ca180652cd65e976, type: 2}
+  - {fileID: 1897700826215934, guid: b3401651070aee9469a3c3d73f0fdcdf, type: 2}
+  - {fileID: 1479952663936296, guid: a4e70fd1230b3d34f9d209718b6b2587, type: 2}
+  NameColors:
+  - blue
+  - red
+  - green
+  - orange
+  colors: {fileID: 0}
+  canvasText: {fileID: 0}
+  NewColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.19421315, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0.116252184, b: 1, a: 1}
+  - {r: 1, g: 0.46475774, b: 0, a: 1}

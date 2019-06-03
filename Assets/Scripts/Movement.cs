@@ -15,6 +15,7 @@ public class Movement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
 		float moveX = Input.GetAxis ("Horizontal");
 		float moveY = Input.GetAxis ("Vertical");
 
