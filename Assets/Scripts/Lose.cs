@@ -8,15 +8,7 @@ public class Lose : MonoBehaviour
 {
 
     public static bool RestarNowSpawn = false;
-
     [SerializeField] private GameObject LosePanel;
-    
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
 
@@ -32,7 +24,7 @@ public class Lose : MonoBehaviour
     {
         StartCoroutine(LoadRestart());
         ColorSpawner.lose = false;
-        
+        TimeIsOver.reset = true;
     }
 
     IEnumerator LoadRestart ()
@@ -40,10 +32,8 @@ public class Lose : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync("stage_01");
         while (!operation.isDone)
         {
-            Debug.Log(operation.progress);
             yield return null;
         }
-        ColorSpawner._spawn = true;
     }
 
  

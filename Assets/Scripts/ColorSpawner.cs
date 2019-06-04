@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ColorSpawner : MonoBehaviour
-{
+public class ColorSpawner : MonoBehaviour {
 
     public float timer;
-    //Leave public for debug 12092003
-    public static bool _spawn = true;
-    //end
     public static bool lose = false;
     public static bool ChangeColor = false;
 
@@ -19,37 +15,30 @@ public class ColorSpawner : MonoBehaviour
     [SerializeField] private GameObject canvasText;
     [SerializeField] private Color[] NewColors;
 
-    private void Start()
-    {
-        ChangeColorName();
-    }
-
-    private void Update()
-    {
-
-        if (lose == false)
-        {
-            if (ChangeColor == true)
-            {
-                ChangeColorName();
-                ChangeColor = false;
-            }
-
-            if (_spawn)
-            {
-                for (int x = 0; x < CubeColor.Length; x++)
-                {
-                    Instantiate(CubeColor[x], new Vector3(Random.Range(-15.94f, 15.94f), Random.Range(-7.7f, 7.7f), 1f), Quaternion.identity);
-                }
-                _spawn = false;
-            }
+    private void Start () {
+        ChangeColorName ();
+        for (int x = 0; x < CubeColor.Length; x++) {
+            Instantiate (CubeColor[x], new Vector3 (Random.Range (-15.94f, 15.94f), Random.Range (-7.7f, 7.7f), 1f), Quaternion.identity);
         }
     }
 
-    void ChangeColorName()
-    {
-        colors.text = NameColors[Random.Range(0, 3)];
-        colors.color = NewColors[Random.Range(0, 3)];
-        canvasText.SetActive(true);
+    private void Update () {
+
+        if (lose == false) {
+            if (ChangeColor == true) {
+                ChangeColorName ();
+                for (int x = 0; x < CubeColor.Length; x++) {
+                    Instantiate (CubeColor[x], new Vector3 (Random.Range (-15.94f, 15.94f), Random.Range (-7.7f, 7.7f), 1f), Quaternion.identity);
+                }
+                ChangeColor = false;
+            }
+
+        }
+    }
+
+    void ChangeColorName () {
+        colors.text = NameColors[Random.Range (0, 3)];
+        colors.color = NewColors[Random.Range (0, 3)];
+        canvasText.SetActive (true);
     }
 }

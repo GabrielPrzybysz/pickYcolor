@@ -26,8 +26,8 @@ public class CollidingRightColor : MonoBehaviour
         {
             Destroy(col.gameObject);
             CountPoints += 10;
-            ColorSpawner._spawn = true;
             ColorSpawner.ChangeColor = true;
+            TimeIsOver.reset = true;
         }
         else if (col.gameObject.name != "Background")
         {
