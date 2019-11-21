@@ -1,11 +1,6 @@
 #Pick Your Color
 
 
-***
-***
-***
-***
-
 # **Hello Friend!**
 
 ## **Intro**
