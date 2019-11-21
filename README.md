@@ -1,8 +1,5 @@
 # Pick Your Color
 
-
-# **Hello Friend!**
-
 ## **Intro**
 This project bright a casual game, color-based and using the unity 3d physics  
 
