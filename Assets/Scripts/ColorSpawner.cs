@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +10,7 @@ public class ColorSpawner : MonoBehaviour {
     public static bool ChangeColor = false;
 
     [SerializeField] private GameObject[] CubeColor;
-    [SerializeField] private string[] NameColors = new string[4];
+    [SerializeField] private string[] NameColors;
     [SerializeField] private Text colors;
     [SerializeField] private GameObject canvasText;
     [SerializeField] private Color[] NewColors;
@@ -37,8 +37,8 @@ public class ColorSpawner : MonoBehaviour {
     }
 
     void ChangeColorName () {
-        colors.text = NameColors[Random.Range (0, 3)];
-        colors.color = NewColors[Random.Range (0, 3)];
+        colors.text = NameColors[Random.Range (0, NameColors.Length)];
+        colors.color = NewColors[Random.Range (0, CubeColor.Length)];
         canvasText.SetActive (true);
     }
 }
