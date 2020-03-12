@@ -1,7 +1,7 @@
 # Pick Your Color
 
 ## **Intro**
-This project bright a casual game, color-based and using the unity 3d physics  
+This project bright a casual game, color-based and using the unity 3d physics. Future ported to mobile ❤️&nbsp;
 
 ## Project Running GIF
 ![](https://media.giphy.com/media/Ti1nyklU8mAp4hfhTt/giphy.gif)
